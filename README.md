@@ -244,6 +244,14 @@ Built cloud-native platform using:
 
 ---
 
+# 🎓 Certifications                              Certification Number
+
+- Microsoft Certified: Power BI Developer        | C1824C-8C38MA
+- Microsoft Certified: Azure Fundamentals        | 81R618-4F60B1
+- Microsoft Certified: Azure Developer Associate | FDI030-81EDCB
+
+---
+
 # 🤝 CONTACT
 
 🔗 LinkedIn: https://www.linkedin.com/in/jagadeesh-linganti  

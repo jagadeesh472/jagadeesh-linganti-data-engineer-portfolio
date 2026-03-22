@@ -1,5 +1,5 @@
 # Jagadeesh Kumar Linganti  
-## Senior Data Engineer | Azure | AWS | Snowflake | Databricks  
+Senior Data Engineer | Azure | AWS | Snowflake | Databricks | PySpark | ETL/ELT
 
 📍 Germany | 📧 lingantijagadeesh02@gmail.com  
 

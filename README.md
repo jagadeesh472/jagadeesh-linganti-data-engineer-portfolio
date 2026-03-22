@@ -1,4 +1,4 @@
-# jagadeesh-linganti-data-engineer-portfolio
+# Jagadeesh Kumar Linganti  
 ## Senior Data Engineer | Azure | AWS | Snowflake | Databricks  
 
 📍 Germany | 📧 lingantijagadeesh02@gmail.com  

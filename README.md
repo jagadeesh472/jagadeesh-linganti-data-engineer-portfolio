@@ -37,12 +37,8 @@
 **Company:** Janus Henderson Investors  
 **I/O Flow:** `[Fin. Trans]` ➡ `[ADF]` ➡ `[Bronze Lake]` ➡ `[Databricks (SCD2)]` ➡ `[Snowflake (Gold)]`
 
-## 🏗️ Architecture Overview
-![Architecture](profitability_loss_Architecture/images/Jh9VileGMpQxgNhSddQxj5VuV7gvwP6eMoPUbdIm9Bw6zmKIsjxsMTT3i05aFYyXjyAg0Ui-xUqxPdELy5kW0eJoxaouCVtQGoqEnnRQXAg3gsyf086rkJyYNgnzICgE5-UHocsfvWwTGjScTZaJz_KIUxYYOUWlFmZJb0sEo5QXS6GOTEDMul6owEXdpEFp.jpeg)
-
-## 🔄 End-to-End Pipeline
-![Pipeline](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/c00a22637d09a49b0b6b5726d14e77bf060650fb/profitability_loss_Architecture/images/uI8Orv6w036DoKFnrMufj51faqaij24ej3j73SdIvkk8Y45Ld8KsTBxNzxUXh7mM7o-VnUpF6uBNWAxXqyKx3vn4j6Wa7NMUdWlz6iOEhemkhMIX_ZRlslyxJCdFMpDAYJIgXjy5SqJKGlAE6jYVmP65K7Jg0iUf4B1b0F6Z6HVjlX5ot3_ZmzuNAwSKwpwI.jpeg)
-
+## 🏗️ Architecture
+![Architecture](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/tree/c00a22637d09a49b0b6b5726d14e77bf060650fb/profitability_loss_Architecture/images)
 
 #### 🏗️ Technical Deep Dive
 * **Engineering Challenge:** Enabling "as-of" date reporting for any historical point in time.

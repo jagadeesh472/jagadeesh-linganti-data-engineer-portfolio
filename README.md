@@ -18,6 +18,10 @@
 **Company:** Wunderman Thompson (UK)  
 **I/O Flow:** `[APIs/On-Prem]` ➡ `[ADF]` ➡ `[Databricks (PySpark)]` ➡ `[dbt]` ➡ `[Snowflake]` ➡ `[Power BI]`
 
+## 🔄 End-to-End Pipeline Architecture 
+
+![Architecture](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/222ff55a222b0fa3d46a3c4444771d66b197547d/Enterprise%20Data%20Integration%20%26%20Analytics%20Platform/image/enterprise%20data%20ingestion.png)
+
 #### 🏗️ Technical Deep Dive
 * **Engineering Challenge:** Managing "Schema Drift" from external marketing APIs that frequently changed output formats.
 * **Solution:** Implemented **Databricks Autoloader** with schema evolution to incrementally ingest data. Used **dbt** for the Gold layer to enforce strict schema validation and modular SQL tests, ensuring downstream dashboards remained stable.
@@ -76,16 +80,6 @@
 #### 🏗️ Technical Deep Dive
 * **Engineering Challenge:** Processing millions of complex, nested arrays within JSON events.
 * **Solution:** Developed a recursive **PySpark flattening engine** that dynamically explodes nested structures. Combined with **Snowflake’s VARIANT** data type, this provided a "Schema-on-Read" capability that reduced processing time by **50%**.
-
----
-
-### 🔹 4. Retail Cloud Migration (On-Prem ➡ AWS)
-**I/O Flow:** `[POS]` ➡ `[Kinesis]` ➡ `[AWS Glue (Streaming)]` ➡ `[S3]` ➡ `[Athena]` ➡ `[QuickSight]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Moving terabytes of historical data with zero downtime.
-* **Solution:** Implemented a **Lambda Architecture**. The Batch Layer (Glue) migrated historical data to S3 Parquet, while the Speed Layer (Kinesis + Spark Streaming) processed live transactions in 60-second micro-batches.
-
 
 ---
 

@@ -1,1 +1,6 @@
+### 🔹 Retail Cloud Migration (On-Prem ➡ AWS)
+**I/O Flow:** `[POS]` ➡ `[Kinesis]` ➡ `[AWS Glue (Streaming)]` ➡ `[S3]` ➡ `[Athena]` ➡ `[QuickSight]`
 
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Moving terabytes of historical data with zero downtime.
+* **Solution:** Implemented a **Lambda Architecture**. The Batch Layer (Glue) migrated historical data to S3 Parquet, while the Speed Layer (Kinesis + Spark Streaming) processed live transactions in 60-second micro-batches.

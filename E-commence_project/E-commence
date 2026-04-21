@@ -1,4 +1,4 @@
-### 🔹 7. E-Commerce Real-Time Delta Lake
+### 🔹 E-Commerce Real-Time Delta Lake
 **I/O Flow:** `[Web/Clickstream]` ➡ `[Kafka]` ➡ `[Databricks (Streaming)]` ➡ `[Delta Lake]` ➡ `[Snowflake]`
 
 #### 🏗️ Technical Deep Dive

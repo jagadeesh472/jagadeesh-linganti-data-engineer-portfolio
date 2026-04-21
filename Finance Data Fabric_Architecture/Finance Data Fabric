@@ -1,1 +1,7 @@
+### 🔹 Finance Data Fabric (SSOT)
+**Company:** L2B Cloud  
+**I/O Flow:** `[ERP/Banking]` ➡ `[Kafka]` ➡ `[ADLS Gen2]` ➡ `[Databricks]` ➡ `[Synapse]`
 
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Reconciling conflicting data values across different source systems.
+* **Solution:** Built a **Master Data Management (MDM) Survivorship engine** in Databricks. It assigned "Source Confidence Scores" to resolve discrepancies and create a single high-integrity record.

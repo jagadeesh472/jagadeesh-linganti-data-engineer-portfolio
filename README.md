@@ -18,6 +18,10 @@
 **Company:** Wunderman Thompson (UK)  
 **I/O Flow:** `[APIs/On-Prem]` ➡ `[ADF]` ➡ `[Databricks (PySpark)]` ➡ `[dbt]` ➡ `[Snowflake]` ➡ `[Power BI]`
 
+## 🔄 End-to-End Pipeline Architecture 
+
+![Architecture](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/222ff55a222b0fa3d46a3c4444771d66b197547d/Enterprise%20Data%20Integration%20%26%20Analytics%20Platform/image/enterprise%20data%20ingestion.png)
+
 #### 🏗️ Technical Deep Dive
 * **Engineering Challenge:** Managing "Schema Drift" from external marketing APIs that frequently changed output formats.
 * **Solution:** Implemented **Databricks Autoloader** with schema evolution to incrementally ingest data. Used **dbt** for the Gold layer to enforce strict schema validation and modular SQL tests, ensuring downstream dashboards remained stable.
@@ -51,46 +55,27 @@
 **Company:** Wunderman Thompson  
 **I/O Flow:** `[Social APIs]` ➡ `[ADF]` ➡ `[Databricks (Flattening)]` ➡ `[dbt]` ➡ `[Snowflake]`
 
+## 🏗️ Architecture Overview
+
+![Architecture](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/0ca3ae2e246e19734be3a0f16a67e92b2c93c7a5/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/vx0v4HJbaPvNpgcDMbnbKgWOxat4mDdkq9k5xj5S3lr4l9z4kfQOOF7z2GgyGesR7fS_MqmsVmmjXc2E4gaPcg3KiGRuWx_y2pntiyuDoW5E2h20cpSJdFqQ1JFFpvTbHy-petA7CBrQBmov1Du8KSmOkZ1hOcweK6uQino3YCAqZQ4rCsVfuRWZIvtD-ifv.jpeg)
+
+## 📥 Data Ingestion
+
+![Ingestion](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/0ca3ae2e246e19734be3a0f16a67e92b2c93c7a5/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/0rm9o22hz9ptHQ4Idr8d4k7O1GA8s5ZcuF638MUauA8PoOCBeI-7JEjxdArbYF4l_hSu33NuXu-56DIBddCF9G2qAcTi_AJVfGFTZFhK1E9KE5HEBZqL93Jpc6skAQTIaR6VJmGo_w0xEIDq_8ghGnsZyqDItkPm63DoiB47dAjxz34pXXaAA7Hd0iqknxQy.jpeg)
+
+
+## ⚙️ Data Transformation (dbt)
+
+![Processing](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/0ca3ae2e246e19734be3a0f16a67e92b2c93c7a5/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/vI26WfsyZqFsSIslA_hE6-WKQ_1PFyNX54Klt2aj5DxlNwumVewGJYsF3b6w4j1z2yX9fXfewa9DicnD2jj_JH5N7FpEOUQbSBTHUzgZoWX-BWt83xBoCDMRLW4Yt_b7KS_3BDxgWm2zj0cnUf3v6itYhZbJDlEH2ZSA9FfOAGvKbBvWZy8a_yEhVT_PH_4u.jpeg)
+
+## 🥇 Medallion Architecture
+
+![Medallion](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/f21179550c7a8cdaa574de27b9b94ff9dc568dd3/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/D64myjNAr4D7F1b8lSPPyJ8SoNs8KZwUxSJS9yPaQCC06eIlzXGzxG7H2AD6tJOXXOhbl7mrJQX4VSdhwbJZEnY346uGKCFzjWEXFDHgK6-W0GFYvmWRIFc5YNpz89RhuLwHoDGLxiv1k3SaR9FMWFq3zcN2z_puI74FeXCzfsEzNgf5xAQ4L2EZdMiHmXB2.jpeg)
+
+
 #### 🏗️ Technical Deep Dive
 * **Engineering Challenge:** Processing millions of complex, nested arrays within JSON events.
 * **Solution:** Developed a recursive **PySpark flattening engine** that dynamically explodes nested structures. Combined with **Snowflake’s VARIANT** data type, this provided a "Schema-on-Read" capability that reduced processing time by **50%**.
-
----
-
-### 🔹 4. Retail Cloud Migration (On-Prem ➡ AWS)
-**I/O Flow:** `[POS]` ➡ `[Kinesis]` ➡ `[AWS Glue (Streaming)]` ➡ `[S3]` ➡ `[Athena]` ➡ `[QuickSight]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Moving terabytes of historical data with zero downtime.
-* **Solution:** Implemented a **Lambda Architecture**. The Batch Layer (Glue) migrated historical data to S3 Parquet, while the Speed Layer (Kinesis + Spark Streaming) processed live transactions in 60-second micro-batches.
-
----
-
-### 🔹 5. Finance Data Fabric (SSOT)
-**Company:** L2B Cloud  
-**I/O Flow:** `[ERP/Banking]` ➡ `[Kafka]` ➡ `[ADLS Gen2]` ➡ `[Databricks]` ➡ `[Synapse]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Reconciling conflicting data values across different source systems.
-* **Solution:** Built a **Master Data Management (MDM) Survivorship engine** in Databricks. It assigned "Source Confidence Scores" to resolve discrepancies and create a single high-integrity record.
-
----
-
-### 🔹 6. AML Transaction Monitoring (Compliance)
-**I/O Flow:** `[Trans. Systems]` ➡ `[ADF]` ➡ `[Azure SQL DWH]` ➡ `[T-SQL Detection]` ➡ `[Alerts]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Legacy fraud detection was too slow to stop transactions in real-time.
-* **Solution:** Migrated logic into **optimized, set-based T-SQL Stored Procedures** within Azure Synapse. Reduced the "Transaction-to-Alert" window from minutes to **under 15 seconds**.
-
----
-
-### 🔹 7. E-Commerce Real-Time Delta Lake
-**I/O Flow:** `[Web/Clickstream]` ➡ `[Kafka]` ➡ `[Databricks (Streaming)]` ➡ `[Delta Lake]` ➡ `[Snowflake]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Handling "Late-Arriving Events" that skewed real-time session metrics.
-* **Solution:** Implemented **Spark Streaming Watermarking** (10-min threshold). Used **Delta Lake Z-Ordering** on `customer_id` and `timestamp` for lightning-fast read performance.
 
 ---
 

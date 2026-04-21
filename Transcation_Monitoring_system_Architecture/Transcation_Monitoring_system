@@ -1,1 +1,6 @@
+### 🔹 AML Transaction Monitoring (Compliance)
+**I/O Flow:** `[Trans. Systems]` ➡ `[ADF]` ➡ `[Azure SQL DWH]` ➡ `[T-SQL Detection]` ➡ `[Alerts]`
 
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Legacy fraud detection was too slow to stop transactions in real-time.
+* **Solution:** Migrated logic into **optimized, set-based T-SQL Stored Procedures** within Azure Synapse. Reduced the "Transaction-to-Alert" window from minutes to **under 15 seconds**.

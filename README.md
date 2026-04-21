@@ -34,7 +34,7 @@
 **I/O Flow:** `[Fin. Trans]` ➡ `[ADF]` ➡ `[Bronze Lake]` ➡ `[Databricks (SCD2)]` ➡ `[Snowflake (Gold)]`
 
 ## 🏗️ Architecture
-![Architecture]()
+![Architecture](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/tree/c00a22637d09a49b0b6b5726d14e77bf060650fb/profitability_loss_Architecture/images)
 
 #### 🏗️ Technical Deep Dive
 * **Engineering Challenge:** Enabling "as-of" date reporting for any historical point in time.

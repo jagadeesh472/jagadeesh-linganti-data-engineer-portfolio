@@ -33,6 +33,9 @@
 **Company:** Janus Henderson Investors  
 **I/O Flow:** `[Fin. Trans]` ➡ `[ADF]` ➡ `[Bronze Lake]` ➡ `[Databricks (SCD2)]` ➡ `[Snowflake (Gold)]`
 
+## 🏗️ Architecture
+![Architecture]()
+
 #### 🏗️ Technical Deep Dive
 * **Engineering Challenge:** Enabling "as-of" date reporting for any historical point in time.
 * **Solution:** Architected a **Slowly Changing Dimension (SCD) Type 2** strategy. Developed PySpark logic to compare daily records against the master, closing old records with a `VALID_TO` timestamp and opening new ones, allowing "point-in-time" financial views.

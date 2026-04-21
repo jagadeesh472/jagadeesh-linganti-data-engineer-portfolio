@@ -37,17 +37,10 @@
 **Company:** Janus Henderson Investors  
 **I/O Flow:** `[Fin. Trans]` ➡ `[ADF]` ➡ `[Bronze Lake]` ➡ `[Databricks (SCD2)]` ➡ `[Snowflake (Gold)]`
 
-## 🏗️ Modern Architecture
-
-![Modern data Pipeline Architecture](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/20924c7058f6327c34be4bb5c4ab409c73e41659/profitability_loss_Architecture/images/rB0MCw84LW0s27ZqxjIiDQtZICgCuhDH8_Xd3Av8Hi91Ou1t3DD7wo5qHjN9F3v9uH1ICUsYb1FqrI2MekIpGFsW26NUiSICfekdDqgR8VprydPkvOIXBrp-VBkUDFXfY3OfsMnZ33ulB7ve1nq0Zk6YkBuVtQkH_pbSzqHnB0Kjzz_CF5MU3DCTM5ZK02h1.jpeg)
 
 ## Logical Flow
 
 ![Logic Flow](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/20924c7058f6327c34be4bb5c4ab409c73e41659/profitability_loss_Architecture/images/Jh9VileGMpQxgNhSddQxj5VuV7gvwP6eMoPUbdIm9Bw6zmKIsjxsMTT3i05aFYyXjyAg0Ui-xUqxPdELy5kW0eJoxaouCVtQGoqEnnRQXAg3gsyf086rkJyYNgnzICgE5-UHocsfvWwTGjScTZaJz_KIUxYYOUWlFmZJb0sEo5QXS6GOTEDMul6owEXdpEFp.jpeg)
-
-## Medallion Architecture
-
-![Medallion Architecture](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/20924c7058f6327c34be4bb5c4ab409c73e41659/profitability_loss_Architecture/images/N8cRRqUvvdb_ihjOuCERz-D74INgqV_sn6t8g-jBvncDfg_iXR95gn9NYT0VvfA9qm4Q3IiVIZK6AUHCos2-0r1dK8pEqbm5X_jK2peLuon0q260uwWrLdSvApA76icpk-_Dpe9tUjjNM0pBrF2IzxC6YUm0Xc9i3Ygl4CxN7gRDI6VAURqmFskA3YRW2Tu7.jpeg)
 
 
 #### 🏗️ Technical Deep Dive

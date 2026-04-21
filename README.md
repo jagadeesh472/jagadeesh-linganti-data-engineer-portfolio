@@ -86,33 +86,6 @@
 * **Engineering Challenge:** Moving terabytes of historical data with zero downtime.
 * **Solution:** Implemented a **Lambda Architecture**. The Batch Layer (Glue) migrated historical data to S3 Parquet, while the Speed Layer (Kinesis + Spark Streaming) processed live transactions in 60-second micro-batches.
 
----
-
-### 🔹 5. Finance Data Fabric (SSOT)
-**Company:** L2B Cloud  
-**I/O Flow:** `[ERP/Banking]` ➡ `[Kafka]` ➡ `[ADLS Gen2]` ➡ `[Databricks]` ➡ `[Synapse]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Reconciling conflicting data values across different source systems.
-* **Solution:** Built a **Master Data Management (MDM) Survivorship engine** in Databricks. It assigned "Source Confidence Scores" to resolve discrepancies and create a single high-integrity record.
-
----
-
-### 🔹 6. AML Transaction Monitoring (Compliance)
-**I/O Flow:** `[Trans. Systems]` ➡ `[ADF]` ➡ `[Azure SQL DWH]` ➡ `[T-SQL Detection]` ➡ `[Alerts]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Legacy fraud detection was too slow to stop transactions in real-time.
-* **Solution:** Migrated logic into **optimized, set-based T-SQL Stored Procedures** within Azure Synapse. Reduced the "Transaction-to-Alert" window from minutes to **under 15 seconds**.
-
----
-
-### 🔹 7. E-Commerce Real-Time Delta Lake
-**I/O Flow:** `[Web/Clickstream]` ➡ `[Kafka]` ➡ `[Databricks (Streaming)]` ➡ `[Delta Lake]` ➡ `[Snowflake]`
-
-#### 🏗️ Technical Deep Dive
-* **Engineering Challenge:** Handling "Late-Arriving Events" that skewed real-time session metrics.
-* **Solution:** Implemented **Spark Streaming Watermarking** (10-min threshold). Used **Delta Lake Z-Ordering** on `customer_id` and `timestamp` for lightning-fast read performance.
 
 ---
 

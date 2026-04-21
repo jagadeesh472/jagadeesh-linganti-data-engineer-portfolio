@@ -1,0 +1,169 @@
+
+🔷 Project 3 — Disney Social Media Lakehouse (diagrame)
+
+
+[Twitter API]   [TikTok API]   [Social Feeds]
+        │             │              │
+        └─────────────┴──────────────┘
+                     │
+          [Azure Data Factory]
+       (API Ingestion + Scheduling)
+                     │
+                     ▼
+        [Snowflake - Raw Stage]
+     (JSON / CSV - Unprocessed Data)
+                     │
+                     ▼
+        [Databricks - PySpark]
+   - JSON Flattening
+   - Data Enrichment
+   - Deduplication
+                     │
+                     ▼
+              [dbt Layer]
+   - Transformation Models
+   - Schema Validation Tests
+   - Data Quality Checks
+                     │
+                     ▼
+         [Snowflake Warehouse]
+   - Fact: Engagement, Impressions
+   - Dim: Campaign, User
+   - Clustering (timestamp, campaign_id)
+                     │
+                     ▼
+             [Power BI]
+   - Campaign ROI Dashboard
+   - Trend Analysis
+
+----
+
+🔷 Project 4 — AWS Retail Migration
+
+
+                   🔴 REAL-TIME LAYER
+[POS Systems] → [Amazon Kinesis]
+                     │
+                     ▼
+         [Spark Streaming - Glue]
+         (Real-time Processing)
+                     │
+                     ▼
+                 [S3 - Processed]
+
+                 🔵 BATCH LAYER
+[On-Prem SQL Server]
+         │
+         ▼
+      [AWS Glue ETL]
+         │
+         ▼
+      [S3 Data Lake]
+
+                 ⬇ MERGED ⬇
+
+              [Amazon Athena]
+        (Serverless Query Engine)
+                     │
+                     ▼
+              [QuickSight]
+        (Retail Dashboards)
+
+---
+
+🔷 Project 5 — Finance Data Fabric (SSOT)
+
+[ERP]   [CRM]   [Banking APIs]
+   │       │         │
+   └───────┴─────────┘
+           │
+   ┌───────────────┐
+   │ Ingestion     │
+   │ ADF (Batch)   │
+   │ Kafka (Stream)│
+   └───────────────┘
+           │
+           ▼
+   [Azure Data Lake Gen2]
+   - Raw Layer
+   - Processed Layer
+   - Curated Layer
+           │
+           ▼
+   [Databricks]
+   - ETL Pipelines
+   - Streaming Processing
+           │
+           ▼
+   [Synapse Analytics]
+   - Financial Models
+   - Reporting Tables
+
+   🔐 Governance Layer (Overlay)
+   - Data Lineage
+   - RBAC
+   - PII Masking
+
+           ▼
+   [BI / Finance Dashboards]
+
+---
+
+🔷 Project 6 — AML Monitoring System
+
+
+[Transaction Systems]
+         │
+         ▼
+ [Azure Data Factory]
+ (Scheduled Ingestion)
+         │
+         ▼
+ [Azure SQL DWH]
+ - Fraud Detection Logic
+ - Stored Procedures
+         │
+         ▼
+ [Detection Engine]
+ - Risk Scoring
+ - Pattern Matching
+         │
+         ▼
+ [Alerts System]
+ - Compliance Notifications
+         │
+         ▼
+ [Cold Storage / Archive]
+
+---
+
+🔷 Project 7 — E-Commerce Real-Time Platform
+
+  [Website Clickstream]   [Orders]   [Payments]
+           │              │           │
+           └───────┬──────┴───────────┘
+                   ▼
+                [Kafka]
+        (Real-time Event Streaming)
+                   │
+                   ▼
+            [Databricks]
+     - Spark Streaming
+     - KPI Computation
+     - Sessionization
+                   │
+                   ▼
+              [Delta Lake]
+   - Bronze (Raw Events)
+   - Silver (Clean Data)
+   - Gold (KPIs)
+   - Z-Ordering + Compaction
+                   │
+                   ▼
+             [Snowflake]
+      (High Concurrency Analytics)
+                   │
+                   ▼
+             [Power BI]
+   - Conversion Rate Dashboard
+   - Customer Behavior Insights

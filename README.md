@@ -68,6 +68,9 @@
 
 ![Processing](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/0ca3ae2e246e19734be3a0f16a67e92b2c93c7a5/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/vI26WfsyZqFsSIslA_hE6-WKQ_1PFyNX54Klt2aj5DxlNwumVewGJYsF3b6w4j1z2yX9fXfewa9DicnD2jj_JH5N7FpEOUQbSBTHUzgZoWX-BWt83xBoCDMRLW4Yt_b7KS_3BDxgWm2zj0cnUf3v6itYhZbJDlEH2ZSA9FfOAGvKbBvWZy8a_yEhVT_PH_4u.jpeg)
 
+## 🥇 Medallion Architecture
+
+![Medallion](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/f21179550c7a8cdaa574de27b9b94ff9dc568dd3/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/D64myjNAr4D7F1b8lSPPyJ8SoNs8KZwUxSJS9yPaQCC06eIlzXGzxG7H2AD6tJOXXOhbl7mrJQX4VSdhwbJZEnY346uGKCFzjWEXFDHgK6-W0GFYvmWRIFc5YNpz89RhuLwHoDGLxiv1k3SaR9FMWFq3zcN2z_puI74FeXCzfsEzNgf5xAQ4L2EZdMiHmXB2.jpeg)
 
 
 #### 🏗️ Technical Deep Dive

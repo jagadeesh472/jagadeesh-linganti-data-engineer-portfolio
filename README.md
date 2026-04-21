@@ -1,252 +1,110 @@
-# jagadeesh-linganti-data-engineer-portfolio
-Senior Data Engineer Portfolio showcasing end-to-end ETL/ELT pipelines, cloud data platforms (Azure &amp; AWS), Snowflake data warehousing, and real-time analytics solutions using Databricks and PySpark.
+# Jagadeesh Kumar Linganti
+### Senior Data Engineer | Azure | AWS | Snowflake | Databricks | PySpark | ETL/ELT
 
-📍 UK | 📧 lingantijagadeesh02@gmail.com  
-
----
-
-# 🚀 PROFESSIONAL SUMMARY
-
-Senior Data Engineer with 5+ years of experience designing and delivering scalable, cloud-native data platforms across Azure, AWS, and GCP.
-
-Expert in building high-performance ETL/ELT pipelines, real-time data processing systems, and enterprise-grade data architectures with strong focus on **data quality, governance, and cost optimization**.
+📍 **Location:** Stuttgart Region, Germany  
+📧 **Email:** [lingantijagadeesh02@gmail.com](mailto:lingantijagadeesh02@gmail.com)  
+🔗 **LinkedIn:** [linkedin.com/in/jagadeesh-linganti](https://www.linkedin.com/in/jagadeesh-linganti)
 
 ---
 
-# 🌟 FEATURED PROJECTS (DETAILED CASE STUDIES)
+## 🚀 PROFESSIONAL SUMMARY
+**Senior Data Engineer** with 6+ years of experience architecting cloud-native data ecosystems. Specialist in **Medallion Architectures**, **Real-Time Streaming**, and **Enterprise Data Governance**. Proven track record of reducing operational costs by 30% and improving pipeline performance by 40%. **Technical Lead** experienced in mentoring junior engineers, driving Agile sprints, and aligning data strategy with cross-functional business stakeholders.
 
 ---
 
-## 🔹 1. Enterprise Data Integration & Analytics Platform  
+## 🌟 FEATURED PROJECTS (DETAILED CASE STUDIES)
+
+### 🔹 1. Enterprise Data Integration & Analytics Platform
 **Company:** Wunderman Thompson (UK)  
+**I/O Flow:** `[APIs/On-Prem]` ➡ `[ADF]` ➡ `[Databricks (PySpark)]` ➡ `[dbt]` ➡ `[Snowflake]` ➡ `[Power BI]`
 
-### 📌 Business Problem
-Organizations had fragmented data across multiple platforms (marketing, sales, customer systems), making it difficult to generate unified insights and real-time analytics.
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Managing "Schema Drift" from external marketing APIs that frequently changed output formats.
+* **Solution:** Implemented **Databricks Autoloader** with schema evolution to incrementally ingest data. Used **dbt** for the Gold layer to enforce strict schema validation and modular SQL tests, ensuring downstream dashboards remained stable.
 
----
-
-### 🏗️ Solution Architecture
-Designed and implemented a **centralized enterprise data platform** using:
-- Azure Data Factory for ingestion  
-- Azure Databricks (PySpark) for processing  
-- Snowflake for scalable data warehousing  
-- dbt for transformation and testing  
-
-Created a **multi-layer architecture**:
-➡ Raw Layer → Transform Layer → Curated Layer  
+#### 📈 Impact, Scalability & Audit
+* **Business Impact:** Reduced data quality issues by **60%**, enabling reliable real-time global analytics.
+* **Audit Readiness:** Integrated **Azure Purview** for end-to-end data lineage and documentation.
+* **Scalability:** Optimized PySpark shuffle partitions, resulting in a **40% performance gain**.
 
 ---
 
-### ⚙️ Key Contributions
-- Built end-to-end ETL pipelines integrating APIs, on-prem, and cloud sources  
-- Optimized PySpark workloads → improved performance by **40%**  
-- Implemented automated data quality checks → reduced issues by **60%**  
-- Designed Snowflake optimization strategies (clustering, materialized views)  
-- Developed Power BI semantic models for executive dashboards  
-- Enforced GDPR compliance and RBAC security  
+### 🔹 2. Real-Time Financial P&L Platform
+**Company:** Janus Henderson Investors  
+**I/O Flow:** `[Fin. Trans]` ➡ `[ADF]` ➡ `[Bronze Lake]` ➡ `[Databricks (SCD2)]` ➡ `[Snowflake (Gold)]`
+
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Enabling "as-of" date reporting for any historical point in time.
+* **Solution:** Architected a **Slowly Changing Dimension (SCD) Type 2** strategy. Developed PySpark logic to compare daily records against the master, closing old records with a `VALID_TO` timestamp and opening new ones, allowing "point-in-time" financial views.
+
+#### 📈 Impact, Scalability & Audit
+* **Business Impact:** Shifted reporting from "monthly" to "near real-time," accelerating capital cycles.
+* **Audit Readiness:** Provided a 100% transparent audit trail for financial regulators (**SEC/FCA**).
+* **Scalability:** Implemented **Snowflake Clustering Keys** on transaction dates to maintain sub-second query speeds.
 
 ---
 
-### 📈 Business Impact
-- Enabled **real-time analytics across global teams**  
-- Improved decision-making with reliable, high-quality data  
-- Reduced operational inefficiencies and data inconsistencies  
-
----
-
-## 🔹 2. Financial Analytics & Profitability Platform  
-**Company:** Janus Henderson  
-
-### 📌 Business Problem
-Finance teams lacked real-time visibility into profitability and loss, causing delays in decision-making.
-
----
-
-### 🏗️ Solution
-Developed a **real-time financial analytics platform** using:
-- Snowflake (data warehouse)  
-- Informatica (data integration)  
-- Databricks (processing + ML models)  
-
----
-
-### ⚙️ Key Contributions
-- Designed optimized Snowflake data models → improved query performance  
-- Built real-time streaming pipelines using Spark Structured Streaming  
-- Implemented ML models for predictive financial insights  
-- Created data validation pipelines → improved accuracy and reliability  
-- Optimized ETL workflows → reduced latency  
-
----
-
-### 📈 Impact
-- Delivered **real-time financial insights**  
-- Improved forecasting accuracy  
-- Enabled faster and more confident business decisions  
-
----
-
-## 🔹 3. Disney Data Migration & Analytics Platform  
+### 🔹 3. Social Media Intelligence Lakehouse (Disney)
 **Company:** Wunderman Thompson  
+**I/O Flow:** `[Social APIs]` ➡ `[ADF]` ➡ `[Databricks (Flattening)]` ➡ `[dbt]` ➡ `[Snowflake]`
 
-### 📌 Business Problem
-Massive volumes of social media data (Twitter, TikTok, etc.) were underutilized due to lack of scalable processing and structured storage.
-
----
-
-### 🏗️ Solution
-Designed a **scalable ETL pipeline + data warehouse system**:
-- Ingested raw CSV data into Snowflake  
-- Processed using ADF + dbt + Databricks  
-- Structured data into layered architecture  
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Processing millions of complex, nested arrays within JSON events.
+* **Solution:** Developed a recursive **PySpark flattening engine** that dynamically explodes nested structures. Combined with **Snowflake’s VARIANT** data type, this provided a "Schema-on-Read" capability that reduced processing time by **50%**.
 
 ---
 
-### ⚙️ Key Contributions
-- Built ETL pipelines for large-scale social media ingestion  
-- Designed scalable data warehouse and transformation pipelines  
-- Optimized SQL queries and Snowflake storage  
-- Developed Power BI dashboards for analytics  
+### 🔹 4. Retail Cloud Migration (On-Prem ➡ AWS)
+**I/O Flow:** `[POS]` ➡ `[Kinesis]` ➡ `[AWS Glue (Streaming)]` ➡ `[S3]` ➡ `[Athena]` ➡ `[QuickSight]`
+
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Moving terabytes of historical data with zero downtime.
+* **Solution:** Implemented a **Lambda Architecture**. The Batch Layer (Glue) migrated historical data to S3 Parquet, while the Speed Layer (Kinesis + Spark Streaming) processed live transactions in 60-second micro-batches.
 
 ---
 
-### 📈 Impact
-- Enabled ML and BI teams to generate insights  
-- Increased audience engagement and marketing ROI  
-- Transformed raw data into actionable intelligence  
-
----
-
-## 🔹 4. Retail Cloud Migration (On-Prem → AWS)
-
-### 📌 Business Problem
-Legacy on-prem systems were not scalable and could not support real-time analytics.
-
----
-
-### 🏗️ Solution
-Led migration to AWS cloud using:
-- AWS S3 (data lake)  
-- AWS Glue (ETL)  
-- Kinesis (real-time streaming)  
-- Athena + QuickSight (analytics)  
-
----
-
-### ⚙️ Key Contributions
-- Designed cloud migration strategy  
-- Built real-time ingestion pipelines using Kinesis  
-- Developed ETL jobs using AWS Glue  
-- Enabled real-time analytics using Spark Streaming  
-
----
-
-### 📈 Impact
-- Improved scalability and performance  
-- Enabled real-time business insights  
-- Reduced infrastructure and operational costs  
-
----
-
-## 🔹 5. Finance Data Fabrication Platform  
+### 🔹 5. Finance Data Fabric (SSOT)
 **Company:** L2B Cloud  
+**I/O Flow:** `[ERP/Banking]` ➡ `[Kafka]` ➡ `[ADLS Gen2]` ➡ `[Databricks]` ➡ `[Synapse]`
 
-### 📌 Business Problem
-Financial data was fragmented across systems, making reporting inconsistent and unreliable.
-
----
-
-### 🏗️ Solution
-Built a **centralized data platform (single source of truth)**:
-- Azure Data Lake + Synapse + Databricks  
-- Integrated batch + real-time pipelines  
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Reconciling conflicting data values across different source systems.
+* **Solution:** Built a **Master Data Management (MDM) Survivorship engine** in Databricks. It assigned "Source Confidence Scores" to resolve discrepancies and create a single high-integrity record.
 
 ---
 
-### ⚙️ Key Contributions
-- Built scalable ETL pipelines across multiple systems  
-- Implemented data lineage and governance  
-- Processed streaming data using Kafka  
-- Applied PII masking and compliance controls  
+### 🔹 6. AML Transaction Monitoring (Compliance)
+**I/O Flow:** `[Trans. Systems]` ➡ `[ADF]` ➡ `[Azure SQL DWH]` ➡ `[T-SQL Detection]` ➡ `[Alerts]`
+
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Legacy fraud detection was too slow to stop transactions in real-time.
+* **Solution:** Migrated logic into **optimized, set-based T-SQL Stored Procedures** within Azure Synapse. Reduced the "Transaction-to-Alert" window from minutes to **under 15 seconds**.
 
 ---
 
-### 📈 Impact
-- Created unified financial reporting system  
-- Improved data accuracy and traceability  
-- Enabled enterprise-wide analytics  
+### 🔹 7. E-Commerce Real-Time Delta Lake
+**I/O Flow:** `[Web/Clickstream]` ➡ `[Kafka]` ➡ `[Databricks (Streaming)]` ➡ `[Delta Lake]` ➡ `[Snowflake]`
+
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Handling "Late-Arriving Events" that skewed real-time session metrics.
+* **Solution:** Implemented **Spark Streaming Watermarking** (10-min threshold). Used **Delta Lake Z-Ordering** on `customer_id` and `timestamp` for lightning-fast read performance.
 
 ---
 
-## 🔹 6. Transaction Monitoring System (AML)  
+## 🏆 KEY METRICS SUMMARY
 
-### 📌 Business Problem
-Need to detect fraudulent financial transactions in real-time.
-
----
-
-### 🏗️ Solution
-Developed AML monitoring system using:
-- Azure Data Factory  
-- Azure SQL DWH  
-- T-SQL  
+| Pillar | Achievement |
+| :--- | :--- |
+| **Pipeline Performance** | 40% Improvement through Spark/Snowflake tuning. |
+| **Data Quality** | 60% Reduction in incidents via automated dbt/Delta checks. |
+| **Cost Savings** | 30% Reduction using serverless and lifecycle policies. |
+| **Leadership** | Lead Agile teams and mentored junior engineers in PySpark best practices. |
 
 ---
 
-### ⚙️ Key Contributions
-- Built fraud detection stored procedures  
-- Designed automated data pipelines  
-- Optimized data migration processes  
+## 🎓 CERTIFICATIONS & LANGUAGES
 
----
-
-### 📈 Impact
-- Strengthened fraud detection capabilities  
-- Improved compliance and monitoring efficiency  
-
----
-
-## 🔹 7. E-Commerce Data Platform  
-
-### 📌 Business Problem
-Retail analytics required scalable infrastructure and real-time data processing.
-
----
-
-### 🏗️ Solution
-Built cloud-native platform using:
-- Azure Databricks + Delta Lake  
-- Kafka for streaming  
-- Snowflake for analytics  
-
----
-
-### ⚙️ Key Contributions
-- Built ETL pipelines for large datasets  
-- Implemented real-time streaming pipelines  
-- Delivered business KPIs and dashboards  
-
----
-
-### 📈 Impact
-- Enabled data-driven retail decisions  
-- Improved operational efficiency  
-
----
-
-# 🏆 KEY ACHIEVEMENTS
-
-- 🚀 Improved data pipeline performance by **40%**  
-- 📉 Reduced data quality issues by **60%**  
-- 💰 Delivered cost-optimized cloud solutions  
-- 📊 Built real-time analytics systems  
-- 🔐 Ensured GDPR-compliant data governance  
-
----
-
-# 🤝 CONTACT
-
-🔗 LinkedIn: https://www.linkedin.com/in/jagadeesh-linganti  
-📧 Email: lingantijagadeesh02@gmail.com  
-
----
+* **Microsoft Certified: Power BI Developer** | Verify: C1824C-8C38MA
+* **Microsoft Certified: Azure Fundamentals** | Verify: 81R618-4F60B1
+* **Microsoft Certified: Azure Developer Associate** | Verify: FDI030-81EDCB
+* **Languages:** English (Fluent), **German (Elementary A1 - Currently pursuing)**, Telugu (Native).

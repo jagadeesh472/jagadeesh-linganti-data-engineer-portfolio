@@ -1,1 +1,6 @@
+### 🔹 7. E-Commerce Real-Time Delta Lake
+**I/O Flow:** `[Web/Clickstream]` ➡ `[Kafka]` ➡ `[Databricks (Streaming)]` ➡ `[Delta Lake]` ➡ `[Snowflake]`
 
+#### 🏗️ Technical Deep Dive
+* **Engineering Challenge:** Handling "Late-Arriving Events" that skewed real-time session metrics.
+* **Solution:** Implemented **Spark Streaming Watermarking** (10-min threshold). Used **Delta Lake Z-Ordering** on `customer_id` and `timestamp` for lightning-fast read performance.

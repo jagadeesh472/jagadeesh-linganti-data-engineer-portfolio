@@ -63,17 +63,11 @@
 
 ![Ingestion](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/0ca3ae2e246e19734be3a0f16a67e92b2c93c7a5/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/0rm9o22hz9ptHQ4Idr8d4k7O1GA8s5ZcuF638MUauA8PoOCBeI-7JEjxdArbYF4l_hSu33NuXu-56DIBddCF9G2qAcTi_AJVfGFTZFhK1E9KE5HEBZqL93Jpc6skAQTIaR6VJmGo_w0xEIDq_8ghGnsZyqDItkPm63DoiB47dAjxz34pXXaAA7Hd0iqknxQy.jpeg)
 
-### 🔗 Third-Party Data Integration
-
-![Social Ingestion](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/0ca3ae2e246e19734be3a0f16a67e92b2c93c7a5/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/EDNDV9QNGcPjo8N1q9b348-B1dg2s0Wg34HRJjrltywDJuTUlcgK9PWM7qAlvBaBJFXnc-y1vIzTdn56KPbsd8EWwABS1CRcSu94RlsA1xD0NqcFWhSDjsqo45tLBshMtdTKPWzKiOhmOoYskk5fEs0FGJx9sJYRgMmcWw8LOZ190vOtv04iySpHydXfEvSs.jpeg)
 
 ## ⚙️ Data Transformation (dbt)
 
 ![Processing](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/0ca3ae2e246e19734be3a0f16a67e92b2c93c7a5/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/vI26WfsyZqFsSIslA_hE6-WKQ_1PFyNX54Klt2aj5DxlNwumVewGJYsF3b6w4j1z2yX9fXfewa9DicnD2jj_JH5N7FpEOUQbSBTHUzgZoWX-BWt83xBoCDMRLW4Yt_b7KS_3BDxgWm2zj0cnUf3v6itYhZbJDlEH2ZSA9FfOAGvKbBvWZy8a_yEhVT_PH_4u.jpeg)
 
-## 🥇 Medallion Architecture
-
-![Medallion](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/9bef8030c0df7ecf1b4f0d07094864431b5cdac6/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/D64myjNAr4D7F1b8lSPPyJ8SoNs8KZwUxSJS9yPaQCC06eIlzXGzxG7H2AD6tJOXXOhbl7mrJQX4VSdhwbJZEnY346uGKCFzjWEXFDHgK6-W0GFYvmWRIFc5YNpz89RhuLwHoDGLxiv1k3SaR9FMWFq3zcN2z_puI74FeXCzfsEzNgf5xAQ4L2EZdMiHmXB2.jpeg)
 
 
 #### 🏗️ Technical Deep Dive

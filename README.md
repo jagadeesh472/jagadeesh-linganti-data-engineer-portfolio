@@ -73,7 +73,7 @@
 
 ## 🥇 Medallion Architecture
 
-![Medallion](Disney Social Media Data Lakehouse Architecture.diagrames/image/D64myjNAr4D7F1b8lSPPyJ8SoNs8KZwUxSJS9yPaQCC06eIlzXGzxG7H2AD6tJOXXOhbl7mrJQX4VSdhwbJZEnY346uGKCFzjWEXFDHgK6-W0GFYvmWRIFc5YNpz89RhuLwHoDGLxiv1k3SaR9FMWFq3zcN2z_puI74FeXCzfsEzNgf5xAQ4L2EZdMiHmXB2.jpeg)
+![Medallion](https://github.com/jagadeesh472/jagadeesh-linganti-data-engineer-portfolio/blob/9bef8030c0df7ecf1b4f0d07094864431b5cdac6/Disney%20Social%20Media%20Data%20Lakehouse%20Architecture.diagrames/image/D64myjNAr4D7F1b8lSPPyJ8SoNs8KZwUxSJS9yPaQCC06eIlzXGzxG7H2AD6tJOXXOhbl7mrJQX4VSdhwbJZEnY346uGKCFzjWEXFDHgK6-W0GFYvmWRIFc5YNpz89RhuLwHoDGLxiv1k3SaR9FMWFq3zcN2z_puI74FeXCzfsEzNgf5xAQ4L2EZdMiHmXB2.jpeg)
 
 
 #### 🏗️ Technical Deep Dive

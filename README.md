@@ -8,7 +8,7 @@
 ---
 
 ## 🚀 PROFESSIONAL SUMMARY
-**Senior Data Engineer** with 6+ years of experience architecting cloud-native data ecosystems. Specialist in **Medallion Architectures**, **Real-Time Streaming**, and **Enterprise Data Governance**. Proven track record of reducing operational costs by 30% and improving pipeline performance by 40%. **Technical Lead** experienced in mentoring junior engineers, driving Agile sprints, and aligning data strategy with cross-functional business stakeholders.
+**Senior Data Engineer** with 5+ years of experience architecting cloud-native data ecosystems. Specialist in **Medallion Architectures**, **Real-Time Streaming**, and **Enterprise Data Governance**. Proven track record of reducing operational costs by 30% and improving pipeline performance by 40%. **Technical Lead** experienced in mentoring junior engineers, driving Agile sprints, and aligning data strategy with cross-functional business stakeholders.
 
 ---
 
